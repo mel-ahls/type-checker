@@ -23,6 +23,8 @@ img {
    display: block;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Prompt:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Taviraj:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Trirong:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
 @font-face {
   font-family: "Faune";
   font-weight: 400;
@@ -68,13 +70,25 @@ h1 {
   font-size: 24px;
 }
 
-.option {
-  margin: 10px 0 0 0;
+div.option {
+  margin: 20px 0 0 0;
+}
+
+div.option-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 label {
   display: block;
   margin: 0 0 5px 0;
+}
+
+label span {
+  float: right;
+  font-style: italic;
+  
 }
 
 input[type=text] {
@@ -86,6 +100,14 @@ input[type=text] {
   padding: 5px 7px;
 }
 
+input[type=range]{
+  width: 100%;
+}
+
+select {
+  width: 100%;
+}
+
 textarea.output {
   font-size: 64px;
   width: 100%;
@@ -94,6 +116,20 @@ textarea.output {
   border: none;
   outline: none;
   min-height: 100vh;
+}
+
+div.colors {
+  display: flex;
+}
+
+div.colors div {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  text-align: center;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
 
