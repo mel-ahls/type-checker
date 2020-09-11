@@ -13,6 +13,8 @@ const typefaceTag = document.querySelector(`select[name="typeface"]`);
 const fontweightTag = document.querySelector(`input[name="fontweight"]`);
 const fontweightOutput = document.querySelector("span.fontweight-output");
 
+const colorTags = document.querySelectorAll("div.colors div");
+
 const outputTag = document.querySelector("textarea.output");
 const originalText = outputTag.value;
 
@@ -60,6 +62,25 @@ italicTag.addEventListener("change", function(){
 // when i change my select for typeface, update the font family
 typefaceTag.addEventListener("input", function(){
   outputTag.style.fontFamily = this.value;
+})
+
+// go through all of my color tags, then when I click one of them, change the background color and the text color, and make this tag be selected
+colorTags.forEach(tag => {
+  
+  tag.addEventListener("click", function() {
+
+    outputTag.style.backgroundColor = this.style.backgroundColor
+    outputTag.style.color = this.style.color
+
+    // reset classes
+    colorTags.forEach(tag => {
+      tag.classList.remove("selected")
+    })
+
+    // only to this clicked one
+    this.classList.add("selected");
+  })
+
 })
 
 

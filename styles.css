@@ -51,7 +51,7 @@ body {
 	
 	background-color: #2a2a2a;
 	color: #ffffff;
-	margin: 40px 40px 40px 320px;
+	margin: 0 0 0 280px;
 }
 
 section.options {
@@ -116,6 +116,7 @@ textarea.output {
   border: none;
   outline: none;
   min-height: 100vh;
+  padding: 40px;
 }
 
 div.colors {
@@ -130,6 +131,25 @@ div.colors div {
   text-align: center;
   margin-right: 10px;
   margin-top: 5px;
+  transition: border 0.25s;
+}
+
+div.colors div.selected {
+  border: 2px solid white;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: grey;
+  border-radius: 50%;
+  transition: .25s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: white;
 }
 
 
