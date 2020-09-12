@@ -1,45 +1,45 @@
-const sentenceTag = document.querySelector(`input[type=text]`);
+const sentenceTag = document.querySelector(`input[type="text"]`)
 
-const typesizeTag = document.querySelector(`input[name=typesize]`);
-const typesizeOutput = document.querySelector('span.typesize-output');
+const typesizeTag = document.querySelector(`input[name="typesize"]`)
+const typesizeOutput = document.querySelector("span.typesize-output")
 
-const lineheightTag = document.querySelector(`input[name=lineheight]`)
+const lineheightTag = document.querySelector(`input[name="lineheight"]`)
 const lineheightOutput = document.querySelector("span.lineheight-output")
 
-const italicTag = document.querySelector('input[name=italic]');
+const italicTag = document.querySelector('input[name="italic"]')
 
-const typefaceTag = document.querySelector(`select[name="typeface"]`);
+const typefaceTag = document.querySelector(`select[name="typeface"]`)
 
-const fontweightTag = document.querySelector(`input[name="fontweight"]`);
-const fontweightOutput = document.querySelector("span.fontweight-output");
+const fontweightTag = document.querySelector(`input[name="fontweight"]`)
+const fontweightOutput = document.querySelector("span.fontweight-output")
 
-const colorTags = document.querySelectorAll("div.colors div");
+const colorTags = document.querySelectorAll("div.colors div")
 
-const outputTag = document.querySelector("textarea.output");
-const originalText = outputTag.value;
+const outputTag = document.querySelector("textarea.output")
+const originalText = outputTag.value
 
 // when I type in my sentence tag, update the output tag
-sentenceTag.addEventListener("keyup", function(){
+sentenceTag.addEventListener("keyup", function() {
   if (this.value) {
-    outputTag.value = this.value;
+    outputTag.value = this.value
   } else {
-    outputTag.value = originalText;
+    outputTag.value = originalText
     // if there is no text in the output, put the original text back
-    }
+  }
 });
 
 // when I type in my outputTag, update the sentence tag
-outputTag.addEventListener("keyup", function (){
-  sentenceTag.value = this.value;
+outputTag.addEventListener("keyup", function() {
+  sentenceTag.value = this.value
 })
 
 // when i change my type size slide, update the text next to it and change the outputTag's font size
-typesizeTag.addEventListener("input", function(){
-  outputTag.style.fontSize = this.value + "px";
-  typesizeOutput.innerHTML = this.value + "px";
+typesizeTag.addEventListener("input", function() {
+  outputTag.style.fontSize = this.value + "px"
+  typesizeOutput.innerHTML = this.value + " pixels"
 })
 
-fontweightTag.addEventListener("input", function () {
+fontweightTag.addEventListener("input", function() {
   outputTag.style.fontWeight = this.value
   fontweightOutput.innerHTML = this.value
 })
